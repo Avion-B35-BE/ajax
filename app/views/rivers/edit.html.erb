@@ -1,0 +1,12 @@
+<% content_for :title, "Editing river" %>
+
+<h1>Editing river</h1>
+
+<%= render "form", river: @river %>
+
+<br>
+
+<div>
+  <%= link_to "Show this river", @river %> |
+  <%= link_to "Back to rivers", rivers_path %>
+</div>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @river %>
+
+<div>
+  <%= link_to "Edit this river", edit_river_path(@river) %> |
+  <%= link_to "Back to rivers", rivers_path %>
+
+  <%= button_to "Destroy this river", @river, method: :delete %>
+</div>
