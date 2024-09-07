@@ -1,0 +1,11 @@
+document.getElementById("articles").innerHTML += "<%= j render @article %>";
+
+var article_title = document.getElementById("article_title");
+
+article_title.value = "";
+article_title.focus();
+
+var article_body = document.getElementById("article_body");
+article_body.value = '';
+
+document.getElementById("article-errors").remove();
