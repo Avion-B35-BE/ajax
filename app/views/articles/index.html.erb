@@ -1,16 +1,20 @@
-<p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Articles" %>
-
-<h1>Articles</h1>
-
-<div id="articles">
-  <% @articles.each do |article| %>
-    <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
-  <% end %>
+<div data-controller="article-form">
+  <%= render "form", article: @article %>
 </div>
 
-<%= link_to "New article", new_article_path %>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id='articles'>
+    <%= render @articles %>
+  </tbody>
+</table>
+
+<br>
